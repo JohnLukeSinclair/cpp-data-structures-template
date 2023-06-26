@@ -99,7 +99,7 @@ public:
 			}
 			else {
 				if (head->next) {
-					head->next->prev = prev;
+					head->next->prev = NULL;
 				}
 				head = head->next;
 				delete current;
@@ -165,15 +165,4 @@ public:
 
 int main()
 {
-	NodeList list;
-
-	list.appendNode(1);
-	list.appendNode(2);
-	list.appendNode(3);
-
-	list.deleteTail();
-	list.deleteTail();
-	list.deleteTail();
-
-	list.printList();
 }
